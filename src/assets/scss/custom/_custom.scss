@@ -99,16 +99,26 @@ body.archive {
   }
 }
 
-.logo_wrapper {
+.logo_wrapper  {
   height: 100px;
   float: left;
-  transition: all .2s
+  transition: all .2s;
+
+  display: table;
+  vertical-align: middle;
+  justify-content: center;
+
+  img {
+    transition: all .2s;
+  }
 }
 
 .q_logo {
+  display: table-cell;
+  vertical-align: middle;
   position: relative;
-  top: 50%;
   left: 0;
+
 }
 
 /** Main Menu **/
@@ -155,7 +165,11 @@ body.archive {
 header.shrink  {
 
   .logo_wrapper {
-    height: 40px;
+    height: 100%;
+
+    img {
+      transform: scale(.8);
+    }
   }
 
   #menu-main-menu > li > a {
